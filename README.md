@@ -13,7 +13,7 @@
 
 ## 📚 Tema
 **Examen Parcial #2**  
-_Solución al parcial de la material Desarrollo y Técnicas de Aplicaciones Web,basandose en Almacenamiento Local y Web Services, utilizando Laravel 12, PHP 8, tecnologías front-end y control de versiones con GitHub._
+_Solución al parcial de la materia Desarrollo y Técnicas de Aplicaciones Web,basandose en Almacenamiento Local y Web Services, utilizando Laravel 12, PHP 8, tecnologías front-end y control de versiones con GitHub._
 
 ---
 
@@ -44,5 +44,5 @@ _Solución al parcial de la material Desarrollo y Técnicas de Aplicaciones Web,
 ---
 
 <p align="center">
-  <strong>Universidad Nacional de El Salvador, Ingenieria en Desarrollo de Software✨</strong>
+  <strong>✨Universidad Nacional de El Salvador, Ingenieria en Desarrollo de Software✨</strong>
 </p>
