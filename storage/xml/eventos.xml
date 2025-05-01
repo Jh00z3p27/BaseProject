@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventos>
+
+    <evento>
+        <nombre>Conferencia de Tecnología</nombre>
+        <fecha>2025-05-15</fecha>
+        <lugar>San Salvador</lugar>
+        <descripcion>Evento sobre avances en inteligencia artificial.</descripcion>
+    </evento>
+
+    <evento>
+        <nombre>Feria de Empleo</nombre>
+        <fecha>2025-06-10</fecha>
+        <lugar>Santa Ana</lugar>
+        <descripcion>Reclutamiento de talento joven para el área de desarrollo de software.</descripcion>
+    </evento>
+
+    <evento>
+        <nombre>Hackathon Universitario</nombre>
+        <fecha>2025-07-05</fecha>
+        <lugar>San Miguel</lugar>
+        <descripcion>Competencia de programación para estudiantes universitarios.</descripcion>
+    </evento>
+
+    <evento>
+        <nombre>Charla de Ciberseguridad</nombre>
+        <fecha>2025-06-20</fecha>
+        <lugar>San Vicente</lugar>
+        <descripcion>Introducción a la protección de datos en entornos web.</descripcion>
+    </evento>
+
+    <evento>
+        <nombre>Expo Innovación</nombre>
+        <fecha>2025-08-01</fecha>
+        <lugar>La Libertad</lugar>
+        <descripcion>Muestra de proyectos de innovación tecnológica.</descripcion>
+    </evento>
+    
+</eventos>

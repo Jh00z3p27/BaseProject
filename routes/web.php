@@ -57,4 +57,11 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
+// Ruta para leer XML
+Route::get('/admin/leer-eventos', [DashboardController::class, 'leerEventosXML'])->name('admin.leer.eventos');
+
+// Rutas para la calculadora SOAP
+Route::get('/admin/calculadora', [DashboardController::class, 'calculadora'])->name('admin.calculadora');
+Route::post('/admin/calcular', [DashboardController::class, 'calcular'])->name('admin.calcular');
+
 
