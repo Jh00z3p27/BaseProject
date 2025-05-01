@@ -2,6 +2,29 @@
 
 Este proyecto implementa la integración de servicios XML y SOAP en una aplicación Laravel.
 
+## 👨‍💻 Integrantes del Grupo #8
+
+| Nombre Completo                            | Código    |
+|-------------------------------------------|-----------|
+| Albert Uziel Hernández Mendoza            | HM20019   |
+| Miguel Alejandro Linares Mendoza          | LM22040   |
+| Franklin Giovanny Ávila González          | AG22076   |
+| José Manuel Cerritos Estrada              | EE22004   |
+| Dora Elizabeth Hernández Chachagua        | HC22030   |
+| José Antonio Mena Ávila                   | MA99048   |
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Versión | Descripción                                  |
+|------------|---------|----------------------------------------------|
+| Laravel    | 12      | Framework PHP para desarrollo web moderno    |
+| PHP        | 8       | Lenguaje de programación del lado del servidor |
+| GitHub     | -       | Control de versiones y colaboración en equipo |
+| HTML5      | -       | Lenguaje de marcado para estructurar contenido |
+| CSS3       | -       | Estilos visuales modernos y responsivos       |
+| XML        | -       | Intercambio de datos estructurados            |
+
+
 ## Requisitos Implementados
 
 ### 1. Lectura de XML y conversión a JSON
@@ -13,36 +36,6 @@ Este proyecto implementa la integración de servicios XML y SOAP en una aplicaci
 - **✅ Punto 2.a**: Integración con servicio SOAP gratuito (dneonline.com).
 - **✅ Punto 2.b**: Vista que permite realizar operaciones matemáticas (suma, resta, multiplicación, división).
 - **✅ Punto 2.c**: Procesamiento de peticiones en controlador Laravel y visualización de resultados.
-
-## Configuración de la base de datos
-
-1. Crear una base de datos MySQL llamada `laravel_proyecto` 
-
-2. Ejecutar las migraciones y seeders para crear las tablas y usuarios:
-   ```
-   php artisan migrate --seed
-   ```
-
-3. generar la clave de la aplicación:
-   ```
-   php artisan key:generate
-   ```
-
-## Usuarios para iniciar sesión
-
-El sistema incluye dos usuarios predefinidos que se crean al ejecutar los seeders:
-
-1. **Administrador**:
-   - Usuario: `admin`
-   - Contraseña: `1234`
-
-2. **Usuario estándar**:
-   - Usuario: `usuario` 
-   - Contraseña: `1234`
-
-## URLs para revisar la implementación
-
-⚠️ **IMPORTANTE**: Para acceder a cualquiera de estas URLs, es **obligatorio iniciar sesión** primero con alguno de los usuarios configurados. Todas las rutas están protegidas y requieren autenticación.
 
 ### XML y JSON
 - **URL**: `/admin/leer-eventos`
@@ -82,14 +75,6 @@ El sistema incluye dos usuarios predefinidos que se crean al ejecutar los seeder
 4. Hacer clic en "Calcular"
 5. Verificar el resultado mostrado
 
-## Archivos principales modificados
-
-- **Controlador**: `app/Http/Controllers/Backend/Dashboard/DashboardController.php`
-- **Vistas**: 
-  - `resources/views/backend/admin/dashboard/vistadashboard.blade.php` (XML)
-  - `resources/views/backend/admin/dashboard/calculadora.blade.php` (SOAP)
-- **Rutas**: `routes/web.php` (líneas 66-67 para las rutas de la calculadora)
-- **Archivo XML**: `storage/xml/eventos.xml`
 
 
 
