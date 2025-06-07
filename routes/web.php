@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\Roles\PermisoController;
 use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
+use App\Http\Controllers\EventController;
 
 
 
@@ -63,5 +64,9 @@ Route::get('/admin/leer-eventos', [DashboardController::class, 'leerEventosXML']
 // Rutas para la calculadora SOAP
 Route::get('/admin/calculadora', [DashboardController::class, 'calculadora'])->name('admin.calculadora');
 Route::post('/admin/calcular', [DashboardController::class, 'calcular'])->name('admin.calcular');
+
+// Ruta RESTful
+Route::resource('events', EventController::class);
+
 
 
