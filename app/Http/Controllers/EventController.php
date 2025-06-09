@@ -27,7 +27,7 @@ class EventController extends Controller
             'nombre_evento' => 'required|string|max:100|unique:events',
             'fecha' => 'required|date|after_or_equal:today',
             'lugar' => 'required|string|max:255',
-            'descripción' => 'nullable|string',
+            'descripcion' => 'nullable|string',
         ], [
             'nombre_evento.required' => 'El nombre del evento es obligatorio.',
             'nombre_evento.unique' => 'Este nombre de evento ya existe.',
@@ -49,7 +49,7 @@ class EventController extends Controller
         return view('events.show', compact('evento'));
     }
 
-    // Mostrar formulario para editar evento 
+    // Mostrar formulario para editar evento
     public function edit($id)
     {
         $evento = Event::findOrFail($id);
