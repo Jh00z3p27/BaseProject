@@ -1,22 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Panel</title>
+@extends('layouts.app')
 
-    <link href="{{ asset('images/logo.png') }}" rel="icon">
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <link href="{{ asset('fontawesome-free/css/all.min.css') }}" type="text/css" rel="stylesheet" />
-    <!-- Theme style -->
-    <link href="{{ asset('css/adminlte.min.css') }}" type="text/css" rel="stylesheet" />
-    <!-- Mensajes Toast -->
-    <link href="{{ asset('css/toastr.min.css') }}" type="text/css" rel="stylesheet" />
-    @yield('content-admin-css')
-</head>
+@section('content')
+<h2>Lista de Eventos</h2>
 
+<a href="{{ route('events.create') }}" class="btn btn-primary mb-3">Nuevo Evento</a>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Lugar</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($eventos as $evento)
+            <tr>
+                <td>{{ $evento->nombre_evento }}</td>
+                <td>{{ $evento->fecha->format('d/m/Y') }}</td>
+                <td>{{ $evento->lugar }}</td>
+                <td>
+                    <a href="{{ route('events.show', $evento->id) }}" class="btn btn-info btn-sm">Ver</a>
+                    <a href="{{ route('events.edit', $evento->id) }}" class="btn btn-warning btn-sm">Editar</a>
+                    <form action="{{ route('events.destroy', $evento->id) }}" method="POST" class="d-inline" onsubmit="return confirm('¿Estás seguro de eliminar este evento?');">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
+
+{{ $eventos->links() }}
+@endsection
+@foreach($events as $evento)
+    <!-- resto del código -->
+    @can('update', $evento)
+        <a href="{{ route('events.edit', $evento) }}" class="btn btn-primary">Editar</a>
+    @endcan
+
+    @can('delete', $evento)
+        <form action="{{ route('events.destroy', $evento) }}" method="POST" style="display:inline;">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger">Eliminar</button>
+        </form>
+    @endcan
+@endforeach
 
 
 <!-- para iniciar con el menu cerrado colocar
